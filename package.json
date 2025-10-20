@@ -1,0 +1,40 @@
+{
+  "name": "nearbuy-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "nodemon --watch src --ext ts --exec ts-node src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docker:dev": "docker-compose -f docker-compose.dev.yml up --build",
+    "docker:dev:down": "docker-compose -f docker-compose.dev.yml down",
+    "docker:prod": "docker-compose up --build",
+    "docker:prod:down": "docker-compose down",
+    "docker:clean": "docker-compose down -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndreaBusse29/NearBuy-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AndreaBusse29/NearBuy-backend/issues"
+  },
+  "homepage": "https://github.com/AndreaBusse29/NearBuy-backend#readme",
+  "devDependencies": {
+    "@types/node": "^24.8.1",
+    "@types/pg": "^8.15.5",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "pg": "^8.16.3"
+  }
+}
